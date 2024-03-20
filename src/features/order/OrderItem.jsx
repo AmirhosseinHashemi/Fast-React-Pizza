@@ -1,3 +1,5 @@
+import PropType from "prop-types";
+
 function OrderItem({ item, isLoadingIngredients, ingredients }) {
   const { quantity, name, totalPrice } = item;
 
@@ -12,5 +14,9 @@ function OrderItem({ item, isLoadingIngredients, ingredients }) {
     </li>
   );
 }
+
+OrderItem.proptypes = {
+  item: PropType.object,
+};
 
 export default OrderItem;

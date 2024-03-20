@@ -1,3 +1,4 @@
+import PropType from "prop-types";
 import { formatCurrency } from "../../utils/helpers";
 
 function CartItem({ item }) {
@@ -14,5 +15,9 @@ function CartItem({ item }) {
     </li>
   );
 }
+
+CartItem.proptypes = {
+  item: PropType.object,
+};
 
 export default CartItem;
