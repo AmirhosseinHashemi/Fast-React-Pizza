@@ -18,7 +18,7 @@ function MenuItem({ pizza }) {
   );
 }
 
-MenuItem.proptypes = {
+MenuItem.propTypes = {
   pizza: PropType.object,
 };
 

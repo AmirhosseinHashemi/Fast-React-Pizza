@@ -1,5 +1,7 @@
 import PropType from "prop-types";
 
+import formatCurrency from "../../utils/helpers";
+
 function OrderItem({ item, isLoadingIngredients, ingredients }) {
   const { quantity, name, totalPrice } = item;
 
@@ -15,7 +17,7 @@ function OrderItem({ item, isLoadingIngredients, ingredients }) {
   );
 }
 
-OrderItem.proptypes = {
+OrderItem.propTypes = {
   item: PropType.object,
 };
 

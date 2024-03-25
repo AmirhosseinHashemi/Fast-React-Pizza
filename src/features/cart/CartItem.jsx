@@ -16,7 +16,7 @@ function CartItem({ item }) {
   );
 }
 
-CartItem.proptypes = {
+CartItem.propTypes = {
   item: PropType.object,
 };
 
