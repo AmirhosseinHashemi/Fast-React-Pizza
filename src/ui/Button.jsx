@@ -1,7 +1,7 @@
 import PropType from "prop-types";
 import { Link } from "react-router-dom";
 
-function Button({ children, disable, to, type }) {
+function Button({ children, disable, to, type, onClick }) {
   const base =
     "text-center text-sm inline-block rounded-full bg-yellow-400  font-semibold uppercase tracking-wider text-stone-800 ring-yellow-300 ring-offset-2 transition hover:bg-yellow-300 focus:outline-none focus:ring disabled:cursor-not-allowed focus:bg-yellow-300";
 
@@ -10,6 +10,7 @@ function Button({ children, disable, to, type }) {
     small: base + " px-3 py-2 sm:px-5 sm:py-3 text-xs",
     secondary:
       "px-4 sm:px-6 text-sm inline-block rounded-full font-semibold uppercase tracking-wider text-stone-300 ring-stone-300 ring-offset-2 transition hover:bg-stone-300 focus:outline-none focus:ring disabled:cursor-not-allowed hover:text-stone-800 border-2 border-stone-300 focus:bg-stone-300 focus:text-stone-800",
+    counter: base + " px-2 py-1 sm:px-2.5 sm:py-2 text-sm",
   };
 
   if (to)
@@ -17,6 +18,13 @@ function Button({ children, disable, to, type }) {
       <Link to={to} className={styles[type]}>
         {children}
       </Link>
+    );
+
+  if (onClick)
+    return (
+      <button onClick={onClick} disabled={disable} className={styles[type]}>
+        {children}
+      </button>
     );
 
   return (
@@ -31,6 +39,7 @@ Button.propTypes = {
   disable: PropType.bool,
   type: PropType.string,
   to: PropType.string,
+  onClick: PropType.func,
 };
 
 export default Button;
