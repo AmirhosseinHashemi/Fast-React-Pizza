@@ -1,8 +1,21 @@
-# React + Vite
+# 🍕 Fast React Pizaa
+In this app you can order how many pizza you want from provided menu and complete your shopping by adding your neccessary information.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 🛠 Built with :
+- React
+- Redux
+- React Router Dom
+- Tailwind
 
-Currently, two official plugins are available:
+## ✨ Covered concepts :
+- Featured base file structure
+- New routing way
+- fetching data when a new route rendered - ***render as fetch*** strategy
+- Submitting form
+- Handle routing errors
+- State management with **Redux Toolkit**
+- Update state with remote data - **Redux Thunk** 
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+
+## 👨 Instructor
+[Jonas Schmedtmann](https://github.com/jonasschmedtmann)
